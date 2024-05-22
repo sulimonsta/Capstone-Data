@@ -1,0 +1,56 @@
+Users
+------
+user_id (PK)
+username
+password
+email
+role
+
+Doctors
+-------
+doctor_id (PK)
+user_id (FK)
+specialty
+credentials
+rating
+
+Patients
+--------
+patient_id (PK)
+user_id (FK)
+medical_history
+
+Appointments
+------------
+appointment_id (PK)
+doctor_id (FK)
+patient_id (FK)
+appointment_date
+status
+
+Telemedicine
+------------
+session_id (PK)
+appointment_id (FK)
+video_call_link
+scheduled_time
+status
+
+Prescriptions
+-------------
+prescription_id (PK)
+appointment_id (FK)
+patient_id (FK)
+doctor_id (FK)
+medications
+issued_date
+
+Feedback
+--------
+feedback_id (PK)
+appointment_id (FK)
+patient_id (FK)
+doctor_id (FK)
+rating
+comments
+submitted_date
