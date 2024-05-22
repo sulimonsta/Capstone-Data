@@ -1,0 +1,22 @@
++-----------+           +---------+              +-----------+
+|   User    |           | Doctor  |              |  Patient  |
+|-----------|           |---------|              |-----------|
+| id (PK)   |<--------->| user_id |              | user_id   |
+| username  |           | specialties|           | medical_history|
+| password  |           | credentials|           |           |
+| is_doctor |           | availability|           |           |
+| is_patient|           | id (PK)   |           | id (PK)   |
++-----------+           +---------+              +-----------+
+       |                   |                           |
+       |                   |                           |
+       v                   v                           v
++----------------+       +------------------+       +------------------+
+|  Appointment   |       |   Prescription  |       |     Feedback      |
+|----------------|       |-----------------|       |-------------------|
+| id (PK)        |       | id (PK)         |       | id (PK)           |
+| doctor_id (FK) |       | doctor_id (FK)  |       | doctor_id (FK)    |
+| patient_id (FK)|       | patient_id (FK) |       | patient_id (FK)   |
+| date           |       | medication      |       | rating            |
+| time           |       | dosage          |       | comments          |
+| status         |       | date            |       | date              |
++----------------+       +------------------+       +-------------------+
